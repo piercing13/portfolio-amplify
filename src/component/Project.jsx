@@ -11,10 +11,10 @@ import { IoIosArrowBack,IoIosArrowForward  } from "react-icons/io";
 import {  IoLogOutOutline  } from "react-icons/io5";
 import { MdDeleteForever } from "react-icons/md";
 import Works from './Works';
-import { API, Auth, graphqlOperation} from 'aws-amplify';
+//import { API, Auth, graphqlOperation} from 'aws-amplify';
 
-import * as queries from '../graphql/queries';
-import * as mutations from '../graphql/mutations';
+//import * as queries from '../graphql/queries';
+//import * as mutations from '../graphql/mutations';
 
 
 
@@ -37,11 +37,11 @@ function Project() {
   const [logIn, setLogIn] = useState(false)
 
   const loggedInState = () => {
-    Auth.currentAuthenticatedUser().then(()=> {
-      setLogIn(true)
-    }).catch(()=> {
-      setLogIn(false)
-    })
+    // Auth.currentAuthenticatedUser().then(()=> {
+    //   setLogIn(true)
+    // }).catch(()=> {
+    //   setLogIn(false)
+    // })
   }
 
   useEffect(()=> {
@@ -52,25 +52,25 @@ function Project() {
  
 
   const SignIn = async () => {
-    try {
-     await  Auth.signIn(userName, pwd)
-     loggedInState()
+    // try {
+    //  await  Auth.signIn(userName, pwd)
+    //  loggedInState()
      
-    } catch (error) {
-      console.log('login error', error)
-    }
+    // } catch (error) {
+    //   console.log('login error', error)
+    // }
     
-    Auth.currentAuthenticatedUser({
-      bypassCache: false // Optional, By default is false. If set to true, this call will send a request to Cognito to get the latest user data
-    })
-      .then((user) => console.log(user))
-      .catch((err) => console.log(err));
+    // Auth.currentAuthenticatedUser({
+    //   bypassCache: false // Optional, By default is false. If set to true, this call will send a request to Cognito to get the latest user data
+    // })
+    //   .then((user) => console.log(user))
+    //   .catch((err) => console.log(err));
   }
 
 
   const signOut = async () => {
-    await Auth.signOut()
-    loggedInState()
+    // await Auth.signOut()
+    // loggedInState()
   }
 
   const editHandler = () => {
@@ -121,19 +121,19 @@ const closePopUp =() => {
 
 
   const submitWork= async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     
 
-    try {
-      await API.graphql({query:mutations.createProject, variables:{input:project}})
-      resetfield()
+    // try {
+    //   await API.graphql({query:mutations.createProject, variables:{input:project}})
+    //   resetfield()
     
-      editHandler()
+    //   editHandler()
 
-      fetchWork()
-    } catch (error) {
-      console.log('error on sending data', error)
-    }
+    //   fetchWork()
+    // } catch (error) {
+    //   console.log('error on sending data', error)
+    // }
 
   }
 
@@ -177,9 +177,9 @@ const closePopUp =() => {
   setSlide(slide => slide+1)}
  }
  
- useEffect(()=> {
-  fetchWork()
- },[logIn])
+//  useEffect(()=> {
+//   fetchWork()
+//  },[logIn])
 
 
 
@@ -197,10 +197,10 @@ const closePopUp =() => {
     }*/}
 
    
-    const workData = await API.graphql({ query: queries.listProjects , authMode: logIn ? "AMAZON_COGNITO_USER_POOLS" : "AWS_IAM"})
-    const workList = workData.data.listProjects.items;
+    // const workData = await API.graphql({ query: queries.listProjects , authMode: logIn ? "AMAZON_COGNITO_USER_POOLS" : "AWS_IAM"})
+    // const workList = workData.data.listProjects.items;
   
-  setInput(workList)
+  //setInput(workList)
 
     
     
