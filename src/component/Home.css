@@ -1,0 +1,102 @@
+
+.home{
+    background-color: black;
+    height: max-content;
+    width: 100vw;
+    animation: bg-slide 1s ease-in-out;
+    position: relative;
+}
+
+.contents{
+    opacity: 0%;
+    animation: appear 1s ease-in-out 1s;
+    animation-fill-mode: forwards;
+    
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+@keyframes bg-slide{
+    0% {width:0px;
+    height: 0px;}
+    50% {width:100vw;
+    height: 100%;}
+    100% {width: 100vw;
+    height: 100%;}
+} 
+
+.contents .title{
+    
+    padding: 0;
+    margin: 0;
+    
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    font-size: 100px;
+    
+    height: fit-content;
+    position: absolute;
+    bottom: 0;
+}
+
+@keyframes appear{
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+
+
+@media screen and (max-width:500px) {
+.contents .title{
+    font-size: 50px
+}
+}
+
+.line{
+    content: "";
+    height: 200px;
+    width: 1px;
+    background-color: white;
+}
+
+
+.socmed{
+    color: white;
+    position: fixed;
+    top: 200px;
+    left: 10px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+
+.email{
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.email:hover{
+    color: red;
+}
+
+ 
+.github{
+    font-size: 23px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.github:hover{
+    color: rgb(148, 148, 148);
+}
+
+.linkedin{
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.linkedin:hover{
+    color: rgb(148, 148, 148);
+}

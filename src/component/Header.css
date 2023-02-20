@@ -1,0 +1,59 @@
+.big-container{
+    background-color: white;
+    width: 100%;
+    border-bottom: solid 1px black;
+    position: fixed;
+    min-height: 9vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-header{
+    
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    gap: 20px;
+}
+
+
+
+.logo-container{
+    width: 80vw;
+    
+}
+
+.logo{
+    width: 4rem;
+    cursor: pointer;
+}
+
+.theme{
+    display: flex;
+    gap: 10px;
+    
+}
+
+.lng{
+    cursor: pointer;
+}
+
+@media screen and (max-width:800px) {
+    .lng{
+      display: none;
+      
+    }
+  }
+  
+  @media screen and (max-width:800px) {
+  
+    .theme{
+      display: none;
+      color: red;
+    }
+    
+  }
+  

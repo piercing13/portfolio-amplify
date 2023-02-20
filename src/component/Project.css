@@ -1,0 +1,326 @@
+.project{
+  background-color: black;
+  color: white;
+  animation: bg-slide 1s ease-in-out;
+  
+  min-height: 100vh;
+}
+
+
+
+.project .logo-container{
+  top: 3%;
+  position: fixed;
+}
+
+.project-content{
+  
+  min-height: 100vh;
+  padding-top: 150px ;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project .subtitle{
+  font-size: 4rem;
+  text-align: left;
+  text-decoration: none;
+  margin-bottom: 0;
+
+position: relative;
+}
+
+@media screen and (max-width: 1000px) {
+  .project .subtitle{
+    text-align: center;
+    font-size: 3rem;
+    
+  }
+}
+
+@media screen and (max-width: 800px){
+  .project .subtitle{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  .project-content{
+    padding-top: 60px;
+  }
+
+
+  
+} 
+
+.project .subtitle span{
+  display: block;
+}
+
+.works-element-container{
+  position: relative;
+  flex: 1 ;
+  display: flex;
+  overflow-x: hidden;
+
+}
+
+.slides{
+  width: 100%;
+  flex-shrink: 0;
+ transition: all 0.3s ease-in-out;
+ 
+}
+
+
+.page-number{
+
+  margin-bottom: 20px;
+  font-size: 30px;
+ text-align: center;
+}
+
+.arrow:hover{
+cursor: pointer;
+}
+
+.project .contents{
+  height: auto;
+  
+  
+}
+
+.edit{
+  font-size: 25px;
+  position:absolute;
+  right: 5%;
+  bottom: -40px;
+  color: gray;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit:hover{
+  color: aliceblue;
+}
+
+.work-edit-popup{
+  
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+
+.hide{
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  width: 100%;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.popup{
+  position: relative;
+  display: flex;
+  width: fit-content;
+  padding: 30px 20px;
+  color: black;
+  flex-direction: column;
+  
+}
+
+
+
+.header{
+  font-weight: 600;
+  height: fit-content;
+ background-color: white;
+  font-size: 2rem;
+  text-align: center;
+  padding: 5px;
+}
+.open{
+position: absolute;
+top: 15px;
+right: 5px;
+font-size: 18px;
+cursor: pointer;
+transition: all 0.3s ease;
+background-color: rgb(223, 223, 223);
+border-radius: 50%;
+width: 23px;
+height: 23px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+
+.form{
+  display: flex;
+  background-color: aliceblue;
+  
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.form-item{
+ 
+  width: 100%;
+  display: flex;
+}
+
+.popup form{
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+}
+
+label{
+  
+  width: 200px;
+}
+
+input{
+  padding: 0px 5px;
+  border-radius: 2pt;
+  font-size: 15px;
+}
+
+.popup .button{
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.popup .button:hover{
+  border: solid 1px black;
+}
+
+
+
+.add{
+  margin-left: 20px;
+  background-color: white;
+  padding: 5px 20px;
+  border-radius: 2pt;
+  border: solid 1px black;
+  cursor: pointer;
+
+}
+
+.form-tools{
+  position: relative;
+}
+
+.toolList-container{
+  
+  
+  display: flex;
+ 
+  flex-direction: row;
+  width: 100%;
+}
+
+.toolList{
+  background-color: rgb(230, 230, 230);
+  margin-right: 10px;
+  border-radius: 2pt;
+  padding: 5px;
+position: relative;
+}
+
+.toolList .closet{
+  background-color: rgb(247, 247, 247);
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.toolList .closet:hover{
+  background-color: rgb(186, 187, 187);
+}
+
+.loginContainer{
+  background-color: white;
+  padding: 10px 0;
+  position: relative;
+  border-radius: 5pt;
+  color: red;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 1px red;
+}
+
+.closeLogin{
+position: absolute;
+top: 0;
+right: 0px;
+}
+
+.login-field{
+  display: flex;
+  font-size: 20px;
+}
+
+.login-form{
+  
+  width: 100%;
+}
+
+.login-field input{
+  padding: 0;
+  
+}
+.login-field .button{
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.delete-project{
+  font-size: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  cursor: pointer;
+}
+
+.delete-project:hover{
+  color: rgb(196, 196, 196) ;
+}

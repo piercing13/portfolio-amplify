@@ -1,0 +1,55 @@
+.App{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  
+
+}
+
+@keyframes enter{
+  0% {transform: translateY(100%);width: 10px;}
+  50% {transform: translateY(0);width: 10px;}
+  100% {transform: translateY(0);}
+  
+}
+
+
+.blank{
+  background-color: white;
+  height: 100%;
+  width: 1px;
+  position:relative;
+  left: 30px;
+  z-index: 2;
+  
+}
+
+
+
+@keyframes moving{
+  0% {
+      transform: translateY(0);
+      
+    }
+    100% {
+      transform: translateY(50px);
+     
+    }
+}
+
+@keyframes movingUp{
+  0% {
+      transform: translateY(50px);
+      
+    }
+    100% {
+      transform: translateY(0);
+     
+    }
+}
+
+@keyframes contentEnter{
+  from {opacity: 0;}
+  to{opacity: 100%;}
+}
+
