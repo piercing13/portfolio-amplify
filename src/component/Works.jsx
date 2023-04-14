@@ -1,16 +1,21 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import './Works.css'
 
-import p1 from '../project1.png'
 import { FaReact, FaHtml5, FaCss3Alt } from "react-icons/fa";
-import { SiJavascript, SiAwsamplify } from "react-icons/si";
+import { SiJavascript, SiAwsamplify , SiNodedotjs,SiDocker,SiPostgresql} from "react-icons/si";
 
-function Works({details, live, github, tools}) {
+
+function Works({details, live, github, tools, imglink}) {
+
+const imgLink = `https://portfolio-storage43524-staging.s3.ap-northeast-2.amazonaws.com/public/${imglink}`
+
+
+ 
   return (
     <div className='works-container'>
         <div className="left">
             <div className="image">
-               <img src={p1}  />
+               <img src={imgLink}  />
                
             </div>
 
@@ -31,6 +36,10 @@ function Works({details, live, github, tools}) {
                         item ==='html' ? <FaHtml5/> :
                         item ==='css' ? <FaCss3Alt/> :
                         item ==='js' ? <SiJavascript/> :
+                        item ==='nodejs' ? <SiNodedotjs/> :
+                        item ==='docker' ? <SiDocker/> :
+                        item ==='postgres' ? <SiPostgresql/> :
+                        
                         item ==='amplify' ? <SiAwsamplify/> : ""}
                       </div>
                   )

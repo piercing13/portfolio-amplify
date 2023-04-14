@@ -1,0 +1,133 @@
+.form-add{
+    background-color: white;
+    color: black;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+
+.form-add form{
+   
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 80%;
+    padding: 5rem 3rem;
+    height: 90vh;
+    
+    justify-content: space-around;
+}
+
+
+
+label{
+    margin-bottom: 30px;
+}
+.form-add input,
+.form-add select{
+    border-radius: 3pt;
+    flex: 1;
+}
+
+.form-add select{
+    flex: 1;
+    height: 90%;
+    padding: 10px 5px;
+    
+}
+
+.form-add .button{
+    background-color: aliceblue;
+    font-size: 20px;
+    width: 100%;
+    border-radius: 2pt;
+    text-align: center;
+}
+
+.form-add .button:hover{
+    background-color: rgb(126, 126, 126);
+    
+}
+
+.tools-container{
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.menu-list{
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.form-add textarea{
+    width: 50%;
+    flex:1
+}
+
+.menu-container{
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
+    
+  
+}
+
+.active{
+ background-color: rgb(185, 185, 185,0.5);
+}
+
+@media screen and (max-width:800px){
+    .menu-container{
+        flex-direction: row;
+    }
+}
+
+
+
+@media screen and (max-width:650px) {
+    .form-add form{
+        width: 95%;
+        
+    }  
+    
+    .form-add textarea{
+        width: 100%;
+        
+    }
+    .tools-container{
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .add{
+        width: fit-content;
+        margin-left: auto;
+        
+    }
+
+    .form-add .form-item input{
+        padding: 8px;
+    }
+    
+
+    .tools-container select{
+        padding: 8px;
+        width: 100%;
+        
+    }
+
+    .form-item{
+        flex-direction: column;
+    }
+
+    .form-add label{
+        margin-bottom: 10px;
+    }
+}
+
+

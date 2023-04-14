@@ -1,0 +1,118 @@
+.admin-container{
+    
+    min-height: 100vh;
+}
+
+.login-header{
+    font-size: 30px;
+    color: black;
+}
+
+.loginContainer .button{
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    padding: 5px 13px;
+}
+
+.loginContainer .button:hover{
+    background-color: rgba(0, 0, 0, 0.692);
+}
+
+.loggedIn{
+    
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+.admin-menu{
+    background-color: black;
+    color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    
+}
+
+.menu-container{
+    padding-top: 80px;
+}
+
+.menu-list{
+    display: flex;
+    gap: 10px;
+    padding: 5px 10px;
+    align-items: center;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-body{
+    flex:1;
+    
+}
+
+.form-add{
+    min-height: 100vh;
+}
+
+.listProject{
+    
+    min-height: 100vh;
+    
+    padding: 50px 0;
+
+    overflow: scroll;
+}
+
+
+@media screen and (max-width:800px) {
+    .loggedIn{
+        flex-direction: column;
+    }  
+    
+    .menu-container{
+        display: flex;
+        
+    }
+
+    .admin .icon{
+        font-size: 15px;
+    }
+
+    .admin-menu{
+        position: fixed;
+        padding: 0;
+        width: 100%;
+    }
+    .menu-list{
+        font-size: 17px;
+    }
+
+    .form-add{
+        padding-top: 120px;
+    }
+
+    .listProject{
+        padding-top: 120px;
+        
+    }
+
+    
+}
+
+@media screen and (max-width:400px) {
+    .form-add,
+    .listProject{
+        padding-top: 130px;
+    }
+
+    
+
+    .menu-list{
+        font-size: 15px;
+    }
+}

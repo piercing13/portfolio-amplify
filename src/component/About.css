@@ -194,10 +194,62 @@ margin-bottom: 20px;
 .skill{
     
    display: flex;
-   gap: 30px;
-   width: 80%;
    
-   
+   width: 50%;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 10rem;
+}
+.icon-container{
+    
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-icon.small{
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+}
+
+.skill .right{
+    align-items: flex-end;
+}
+
+.middle{
+    align-items: center;
+    padding-top: 20px;
+}
+
+.skill-icon.medium{
+    font-size: 40px;
+    width: 70px;
+    height: 70px;
+}
+
+.middle-up{
+    padding-top: 30px;
+}
+
+.middle-bottom{
+    padding-bottom: 30px;
+}
+.skill-icon{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    background-color: white;
+    border-radius: 50%;
+    color: black;
+    transition: all 0.3s ease-in;
+}
+
+.skill-icon:hover{
+    transform: scale(1.5);
 }
 
 @media screen and (max-width:600px) {
@@ -206,10 +258,6 @@ margin-bottom: 20px;
     }
 }
 
-.skill > *{
-    flex: 1;
-   
-}
 
 .skill-title{
     font-size: 1.5rem;

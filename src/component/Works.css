@@ -34,7 +34,7 @@
     }
 
     .image img{
-       min-width: 40%;
+       width: 40%;
        
     }
 
@@ -124,7 +124,9 @@
     }
 
     .image img{
-        min-width: 70%;
+        min-width: 500px;
+        width: 70%;
+
        
     }
     .works-container .right{

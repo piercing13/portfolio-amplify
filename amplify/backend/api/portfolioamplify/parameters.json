@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "portfolioamplify",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authportfolioamplifyd319e9bc",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

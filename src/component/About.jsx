@@ -8,7 +8,9 @@ import { Link } from 'react-router-dom';
 import { SiGmail } from "react-icons/si";
 import { AiFillGithub } from "react-icons/ai";
 import { BsLinkedin, BsMouse } from "react-icons/bs";
-import { FaReact } from "react-icons/fa";
+import { FaReact, FaHtml5, FaCss3Alt } from "react-icons/fa";
+import { SiJavascript, SiAwsamplify , SiNodedotjs,SiDocker,SiPostgresql,SiFigma, SiAmazonaws,SiGithubactions} from "react-icons/si";
+import { FaRProject } from "react-icons/fa";
 function About() {
  const [scrollY, setScrollY] = useState(window.scrollY)
  
@@ -23,7 +25,7 @@ function About() {
 
  useEffect(()=> {
   window.addEventListener('scroll', handleScroll)
-  console.log(scrollY)
+  
 
  },[scrollY])
 
@@ -90,7 +92,7 @@ function About() {
         <div className="skills" ref={skill}>
           <div className="subtitle">Skill</div>
             <div className="skill">
-              <div className="skill-left">
+              {/* <div className="skill-left">
                 <div className="skill-title">
                   FRONTEND
                 </div>
@@ -136,7 +138,34 @@ function About() {
                   <div className="bar "></div>
                 
                 </div>
+              </div> */}
+              <div className="icon-container middle ">
+                
+                <div className="skill-icon small"><SiAmazonaws/></div>
               </div>
+              <div className="icon-container middle ">
+              <div className="skill-icon small"><SiGithubactions/></div>
+                <div className="skill-icon"><FaReact/></div>
+                <div className="skill-icon small"><SiNodedotjs/></div>
+                
+              </div>
+              <div className="icon-container">
+                <div className="skill-icon"><FaHtml5/></div>
+                <div className="skill-icon"><SiJavascript/></div>
+                <div className="skill-icon small"><SiDocker/></div>
+                <div className="skill-icon"><FaRProject/></div>
+              </div>
+              <div className="icon-container middle-up right">
+                <div className="skill-icon"><FaCss3Alt/></div>
+                <div className="skill-icon small "><SiAwsamplify/></div>
+                <div className="skill-icon medium"><SiPostgresql/></div>
+              </div>
+              <div className="icon-container middle-bottom">
+                
+                <div className="skill-icon small"><SiFigma/></div>
+                
+              </div>
+              
             
 
           
