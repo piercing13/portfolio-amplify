@@ -77,9 +77,9 @@ label{
   
 }
 
-.active{
+/* .active{
  background-color: rgb(185, 185, 185,0.5);
-}
+} */
 
 @media screen and (max-width:800px){
     .menu-container{

@@ -205,7 +205,7 @@ function AddProject({value,toolInit, edit,setEdit}) {
 
         <div className="form-item">
           <label htmlFor="image">Upload image</label>
-          <input type="file" name='image' accept='image/png, image/jpeg' onChange={(e) => setImg(e.target.files[0])} />
+          <input type="file" name='image' accept='image/png, image/jpeg, .gif' onChange={(e) => setImg(e.target.files[0])} />
         </div>
 
         <div className="button" onClick={submitWork}>{edit? 'Edit Project' :'Add Project'}</div>

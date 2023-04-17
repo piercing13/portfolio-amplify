@@ -8,9 +8,11 @@ import { NavLink } from 'react-router-dom';
 function Menu({width}) {
   const [show, setShow] =useState(false)
   const [active, setActive] = useState(true)
+  const [click, setClick] = useState()
   const [day, setDay] = useState(true)
   const handleClick = () => {
     setShow(!show)
+    
   }
   
   const handleTheme = () => {
@@ -33,17 +35,17 @@ function Menu({width}) {
 
       
 
-        <div className="items">
+        <div className={click === 'about' ? "items active" : "items"} onClick={()=> setClick('about')}>
           <div className="icon"><AiOutlineUser/></div>
           <NavLink to='/about' activeClassName='active' className='section-title-small' onClick={handleClick}>ABOUT Me</NavLink>
         </div>
 
-        <div className="items">
+        <div className={click === 'project' ? "items active" : "items"} onClick={()=> setClick('project')}>
           <div className="icon"><AiOutlineLaptop/></div>
           <NavLink to='/project' activeClassName='active' className='section-title-small' onClick={handleClick}>Project</NavLink>
         </div>
 
-        <div className="items">
+        <div className={click === 'hi' ? "items active" : "items"} onClick={()=> setClick('hi')}>
           <div className="icon"><BsChatDots/></div>
           <NavLink to='/hi' activeClassName='active' className='section-title-small' onClick={handleClick}>Say hi</NavLink>
         </div>

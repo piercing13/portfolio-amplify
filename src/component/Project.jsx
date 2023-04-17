@@ -162,7 +162,7 @@ function Project() {
             {input.map((item,idx)=> {
               return (
                 <div className="slides " style={{transform:`translateX(${-(slide)*100}%)`}} key={idx} >
-          <Works  details={item.details} live={item.live} github={item.github} tools={item.toolList} imglink={item.filePath}/>
+          <Works  details={item.details} live={item.live} github={item.github} tools={item.toolList} imglink={item.filePath} name={item.name}/>
           
 
           </div>

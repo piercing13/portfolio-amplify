@@ -5,6 +5,18 @@
     
    
 }
+
+.project-name{
+    text-transform:uppercase;
+    font-weight: 600;
+    letter-spacing: 2pt;
+    
+}
+
+.works-container .left{
+    display: flex;
+    gap: 20px;
+}
 @media screen and (max-width: 1250px) {
     .works-container{
         flex-direction: column;
@@ -12,11 +24,8 @@
     }
     .works-container .left{
         width: 100%;
+        flex-direction: column;
         
-        gap: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         
     }
 
@@ -34,7 +43,7 @@
     }
 
     .image img{
-       width: 40%;
+       width: 80%;
        
     }
 
@@ -88,7 +97,7 @@
     }
 
     .image img{
-        width: 70%;
+        width: 100%;
         
      }
 
@@ -108,7 +117,9 @@
         text-align: center;
     }
 
-    
+    .works-container .right{
+        padding: 0;
+    }
     
     .live{
         width: 80%;

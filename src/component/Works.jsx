@@ -5,7 +5,7 @@ import { FaReact, FaHtml5, FaCss3Alt } from "react-icons/fa";
 import { SiJavascript, SiAwsamplify , SiNodedotjs,SiDocker,SiPostgresql} from "react-icons/si";
 
 
-function Works({details, live, github, tools, imglink}) {
+function Works({details, live, github, tools, imglink, name}) {
 
 const imgLink = `https://portfolio-storage43524-staging.s3.ap-northeast-2.amazonaws.com/public/${imglink}`
 
@@ -14,6 +14,9 @@ const imgLink = `https://portfolio-storage43524-staging.s3.ap-northeast-2.amazon
   return (
     <div className='works-container'>
         <div className="left">
+          <div className="project-name">
+            {name}
+          </div>
             <div className="image">
                <img src={imgLink}  />
                
