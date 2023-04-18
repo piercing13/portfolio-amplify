@@ -178,14 +178,14 @@ function Project() {
                       
         </div>}
 
-          
-
-          <div className="page-number">
+        <div className="page-number">
             <div className="arrow">
-              <IoIosArrowBack onClick={backHandler}/>
-              <IoIosArrowForward onClick={forwardHandler}/>
+              <p onClick={backHandler} className='nav-button'>previous project</p>
+              <p onClick={forwardHandler} className='nav-button'>next project</p>
             </div>
           </div>
+
+          
 
         
 

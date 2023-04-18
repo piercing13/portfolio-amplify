@@ -6,10 +6,14 @@ import { SiJavascript, SiAwsamplify , SiNodedotjs,SiDocker,SiPostgresql} from "r
 
 
 function Works({details, live, github, tools, imglink, name}) {
-
+const [slice, setSlice] = useState()
+const [long, setLong] = useState(false)
 const imgLink = `https://portfolio-storage43524-staging.s3.ap-northeast-2.amazonaws.com/public/${imglink}`
 
-
+useEffect(()=> {
+  setSlice(details.slice(0,200))
+},[])
+console.log(slice)
  
   return (
     <div className='works-container'>
@@ -26,9 +30,16 @@ const imgLink = `https://portfolio-storage43524-staging.s3.ap-northeast-2.amazon
         </div>
 
         <div className="right">
-            <div className="details">
-                {details}
-            </div>
+          {!long
+          ?
+          <div className="details">
+          {slice} ... <span className='light-gray' onClick={()=> setLong(true)}>read more</span>
+      </div>
+      :
+      <div className="details">
+          {details}  <span className='light-gray' onClick={()=> setLong(false)}>read less</span>
+      </div>}
+            
 
             {tools.length != 0 ?
             <div className="tools">
